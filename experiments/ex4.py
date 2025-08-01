@@ -10,7 +10,10 @@ while True:
             todos.append(todo.title())
         case 'show':
             for index,item in enumerate(todos):
-                print(f'{index+1}.  {item}')
+                print(f'{index+1}. {item}')
+                print(len(todos))
+            print("hello",index,item) #<---------------------
+
         case 'edit':
             number = int(input("Which number would you like to edit? "))
             number -= 1
