@@ -9,13 +9,16 @@ while True:
             todo = input("Enter a todo: ")
             todos.append(todo.title())
         case 'show':
-            for index,item in enumerate(todos):
-                print(f'{index+1}.  {item}')
+            if not todos:
+                print("You don't have anything to do! Congrats!")
+            else:
+                for index, item in enumerate(todos):
+                    print(f'{index + 1}. {item}')
         case 'edit':
             number = int(input("Which number would you like to edit? "))
             number -= 1
             new_todo = input("Change the todo: ")
-            todos[number] = new_todo
+            todos[number] = new_todo.title()
         case 'complete':
             completed_number = int(input('Which number would you like to complete?'))
             completed_number -= 1
