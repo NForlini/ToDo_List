@@ -1,5 +1,0 @@
-Clean
-Throw
-Clean
-Hello
-Clean
